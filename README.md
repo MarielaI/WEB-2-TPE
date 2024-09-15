@@ -10,8 +10,9 @@ Integrantes:
 
 Mariela Andrea Iacovone
 
-Lenadro Molina
+Leandro Molina
 
 Se adjunta el diagrama de la base de datos: 
 
-![diagrama](https://github.com/user-attachments/assets/50208a9b-7d7d-4ee7-a106-31982f4d989f)
+
+![diagrama](https://github.com/user-attachments/assets/e8dbb4c4-f418-4fc2-95f2-c13997aa8850)
