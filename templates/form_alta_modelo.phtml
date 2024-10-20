@@ -1,0 +1,61 @@
+<!-- formulario de alta de modelos -->
+
+<?php require 'templates/layout/header.phtml';
+ ?>
+<?php if ($error): ?>
+    <div class='alert alert-danger' role='alert'>
+        <?= $error ?>
+    </div>
+<?php endif ?>
+
+<form action="validar_agregar" method="POST" class="my-4">
+    <div class="row">
+    <div class="col-3">
+            <div class="form-group text-danger">
+            <label>Marca</label>
+            <select required name="id_marca" class="form-control">
+
+             <?php 
+                foreach($modelos as $modelo):  
+              ?>
+               <option value="<?= $modelo->id_marca ?>"><?= $modelo->id_marca ?></option>
+
+              <?php endforeach; ?>
+            </select>
+           </div>
+
+        </div>
+          <div class="col-6">
+            <div class="form-group text-danger">
+                <label>Nombre Modelo</label>
+                <input required name="nombre_modelo" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="form-group text-danger">
+                <label>Precio</label>
+                <input required name="precio" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-9">
+    <div class="form-group text-danger">
+        <label>Material</label>
+        <textarea name="material" class="form-control" rows="1"></textarea>
+    </div>
+    </div>
+    <div class="col-3">
+    <div class="form-group text-danger">
+        <label>Talle</label>
+        <textarea name="talle" class="form-control" rows="1"></textarea>
+    </div>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Agregar nuevo modelo</button>
+ </form>
+
+ <a href="listaradmin/" type="button" class='btn btn-warning btn-sm ml-auto'>Volver</a>

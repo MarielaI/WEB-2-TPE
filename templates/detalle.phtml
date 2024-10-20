@@ -1,0 +1,15 @@
+<?php require 'templates/layout/header.phtml' ?>
+
+
+<main class="container mt-5">
+    <div class="text-bg-info p-3">
+        <p class="mb-5 ">id marca : <?php echo $modelo->id_marca ?></p>
+        <p class="mb-5 ">Nombre marca : <?php echo $modelo->nombre_marca ?></p>
+        <p class="mb-5 ">Nombre modelo : <?php echo $modelo->nombre_modelo ?></p>
+        <p class="mb-5 ">Precio $ :<?php echo $modelo->precio ?></p>
+        <p class="mb-5 ">Material :<?php echo $modelo->material ?></p>
+        <p class="mb-5 ">Talle :<?php echo $modelo->talle ?></p>
+         <img src="<?php echo $modelo->img?>" class="img-fluid img-thumbnail"  alt="...">
+    </div>
+    </main>
+    <?php require 'templates/layout/footer.phtml' ?>

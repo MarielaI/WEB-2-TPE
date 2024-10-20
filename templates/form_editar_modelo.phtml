@@ -1,0 +1,38 @@
+<?php require 'templates/layout/header.phtml' ?>
+<form action="validar_modificacion/<?= $modelo->id_modelo ?>" method="POST" class="my-4">
+    <div class="row">
+   
+        <div class="col-6">
+            <div class="form-group text-danger">
+                <label>Modelo</label>
+                <input required name="nombre_modelo" value="<?=$modelo->nombre_modelo?>" type="text" class="form-control">
+            </div>
+        </div>
+        
+        <div class="col-6">
+            <div class="form-group text-danger">
+                <label for=precio>Precio</label>
+                <input required name="precio" value="<?=$modelo->precio?>" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-9">
+    <div class="form-group text-danger">
+        <label >Material</label>
+        <input required name="material" value="<?=$modelo->material?>" type="text"class="form-control"rows="3">
+        </div>
+    </div>
+    <div class="col-3">
+    <div class="form-group text-danger">
+        <label>Talle</label>
+        <input required name="talle" name="talle" value="<?=$modelo->talle?>" class="form-control" rows="1">
+    </div>
+    </div>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Guardar</button>
+   
+</form>
+<a href="listaradmin/" type="button" class='btn btn-warning btn-sm ml-auto'>Volver</a>
